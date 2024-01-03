@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    #photo {
+        border: 3px solid transparent;
+        border-radius: 0;
+    }
+</style>
+</head>
+<body>
+
+<div>學號: <span id="studentID">41018132</span></div>
+<div>姓名: <span id="name">陳豐茂</span></div>
+<div><img id="photo" src="selfie.jpg" width="100"></div>
+<button id="btn1"><content>調整大小</button><content>
+<button id="btn2">圓邊紅框</button>
+<button id="btn3">換大頭照照</button>
+<button id="btn4">圖片淡入淡出</button>
+
+<a href="index.html" target="_blank">原始HTML檔</a>
+<a href="script.js" target="_blank">原始JS檔</a>
+
+<script>
+    $("#btn1").click(function() {
+        $("#studentID, #name").css({"font-size": "35px", "color": "blue"});
+    });
+
+    $("#btn2").click(function() {
+        $("#photo").css({"border-radius": "50%", "border": "3px solid red"});
+    });
+
+    $("#btn3").click(function() {
+        $("#photo").attr("src", "life_photo.jpg");
+    });
+
+    $("#btn4").click(function() {
+        $("#photo").fadeOut().fadeIn();
+    });
+</script>
+
+</body>
+</html>
